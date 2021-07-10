@@ -2,7 +2,7 @@
 In this project datas of different meals are shared.
 It contains the datas such as meal id,cusinie and category of the cuisine are listed
 
-#Operations performed are
+# Operations performed are
 1.find0ne
 2.findmany
 3.limit

@@ -1,1 +1,48 @@
+# mysql queries 
 
+#creating database for meal_info
+
+create table meal_info
+(
+meal_id    int,
+category   varchar(20),
+cuisine    varchar(20)
+);
+
+
+#inserting data to the table
+
+insert into meal_info(meal_id,category,cuisine) values(2344,"dosa","indian");
+insert into meal_info(meal_id,category,cuisine) values(2345,"beverages","indian");
+insert into meal_info(meal_id,category,cuisine) values(2346,"pasta","italian");
+insert into meal_info(meal_id,category,cuisine) values(2347,"rice","indian");
+insert into meal_info(meal_id,category,cuisine) values(2348,"ragi","indian");
+insert into meal_info(meal_id,category,cuisine) values(2349,"soup","thai");
+insert into meal_info(meal_id,category,cuisine) values(2350,"rice bowl","thai");
+insert into meal_info(meal_id,category,cuisine) values(2351,"dosa1","indian");
+insert into meal_info(meal_id,category,cuisine) values(2352,"gheer","thai");
+insert into meal_info(meal_id,category,cuisine) values(2344,"dessert","arab");
+insert into meal_info(meal_id,category,cuisine) values(2344,"chocolate","american");
+
+#finding one  records from the table
+select * from meal_info where meal_id=2352;
+
+#finding all the records from the table
+select * from meal_info;
+
+#altering the column name
+alter table meal_info rename column meal_id to meal_ids;
+
+
+set sql_safe_updates=0
+
+
+select * from meal_info
+
+#updatinng values in the table
+update meal_info
+set meal_ids=2354
+where category ="chocolate" ;
+
+#deleting records from the table
+delete from meal_info where cuisine="american"
